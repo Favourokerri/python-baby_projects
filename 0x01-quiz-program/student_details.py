@@ -28,7 +28,7 @@ def get_age():
             age = int(input("please enter your age: "))
             return (age)
         except ValueError:
-            print("please age must be an integer: ")
+            print("......please age must be an integer: ")
         else:
             break
 
@@ -45,4 +45,4 @@ def get_sex():
 def score():
     score = 0
     print("your initial score is {:d}".format(score))
-    
+    return score
