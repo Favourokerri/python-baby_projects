@@ -22,7 +22,7 @@ def start_quiz():
         try:
             start = input("Enter start [YES/NO]: ").lower()
             if  start == "yes":
-                print("starting session")
+                print("___________starting session_______________")
                 quiz()
             elif start == "no":
                 print("Alright, come back when you are ready 👍")

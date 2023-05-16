@@ -44,5 +44,5 @@ def get_sex():
 
 def score():
     score = 0
-    print("your initial score is {:d}".format(score))
+    print("your initial score is {:d}".format(score), end = "\n\n")
     return score
