@@ -14,8 +14,14 @@ def quiz():
     score = 0
 
     for key, value in quiz.items():
+        print(key)
         print(value['question'])
         answer = input("Anwers: ")
         if answer == value['answer'].lower():
+            print("correct")
             score += 1
-        print(score)
+            print("-------------------------")
+        elif answer != value['answer'].lower:
+            print("you got this answer wrong, the correct answer is", value['answer'])
+            print("--------------------------")
+    print("your score total is {} ".format(score))
