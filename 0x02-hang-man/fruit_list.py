@@ -1,0 +1,22 @@
+fruit = [
+    'apple',
+    'banana', 
+    'orange', 
+    'grape', 
+    'strawberry', 
+    'pineapple', 
+    'mango', 
+    'watermelon', 
+    'kiwi', 
+    'pear', 
+    'peach', 
+    'plum', 
+    'cherry', 
+    'blueberry', 
+    'raspberry', 
+    'lemon', 
+    'lime', 
+    'coconut', 
+    'pomegranate', 
+    'avocado'
+    ]
