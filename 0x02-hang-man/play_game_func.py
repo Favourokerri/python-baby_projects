@@ -21,7 +21,7 @@ def who_To_play():
 
 def play_computer():
     print("this is going to be a guessing game about friuts") 
-    fruits = ['apple', 'orange', 'pineapple', 'pear', 'pawpaw', 'banana'] #list of avaliable friuts
+    fruits = ['apple', 'orange', 'pineapple', 'pawpaw', 'banana'] #list of avaliable friuts
     chosen_word = random.choice(fruits) #the friut randomly chosen
     display = []
     for i in range(len(chosen_word)):
@@ -29,36 +29,25 @@ def play_computer():
         i += 1
     
     game_over = False
-    play_again = True
     lives = 7
     print(display)
-    while play_again:
-        while not game_over:
-            guess_letter = input("guess friut word for word: ")
-            for position in range(len(chosen_word)):
-                letter = chosen_word[position]
-                if letter == guess_letter:
-                    display[position] = letter
-            print(display)
-            if guess_letter not in chosen_word:
-                lives -= 1
-                print("_______oops you gussed wrong you have {:d} lives left________".format(lives), end = "\n")
-                print(stages[lives])
 
-            if '_' not in display:
-                print("____________you win______________")
-                play = input("do you want to try agin?[Y?N]: ").lower()
-                if play == "y":
-                    play_again = True
-                else:
-                    play_again = False
-                    game_over = True
+    while not game_over:
+        guess_letter = input("guess friut word for word: ")
+        for position in range(len(chosen_word)):
+            letter = chosen_word[position]
+            if letter == guess_letter:
+                display[position] = letter
+        print(display)
+        if guess_letter not in chosen_word:
+            lives -= 1
+            print("_______oops you gussed wrong you have {:d} lives left________".format(lives), end = "\n")
+            print(stages[lives])
 
-            elif lives == 0:
-                print("_____________oops you lose__________ ")
+        if '_' not in display:
+            print("____________you win______________")
+            game_over = True
 
-                play = input("do you want to try agin?[Y?N]: ").lower()
-                if play == "y":
-                    play_again = True
-                elif play == "n":
-                    play_again = False
+        elif lives == 0:
+            print("_____________oops you lose__________ ")
+            game_over = True

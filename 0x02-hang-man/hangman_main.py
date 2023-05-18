@@ -1,5 +1,7 @@
 from hangman_func import play_game
 from about_game import about_game
+from get_input_func import get_int
+
 def main():
     go_back = True
     while go_back == True:
@@ -7,11 +9,11 @@ def main():
         print("1)   Play game")
         print("2)   about game")
         print("__________________")
-        ans = input("enter [1/2]: ")
+        ans = get_int()
 
-        if ans == "1":
+        if ans == 1:
             play_game()
-        elif ans == "2":
+        elif ans == 2:
             about_game()
         print("____________________")    
         con = input("Goback [Y/N]: ").lower
